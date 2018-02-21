@@ -14,12 +14,10 @@ float prevTemp = 0;
 
  const char* ssid     = "our_ssID";
  const char* password = "our_Pass";
- // const char* host = "f0132292.xsph.ru";
  const char* host = "f0167723.xsph.ru";
  int sent = 0;
  int value = 0;
 /****************************************************/
-
 
 void setup() {
   Serial.begin(115200);
@@ -84,10 +82,7 @@ void loop() {
   client.print(String("GET ") + url + " HTTP/1.1\r\n" +
                "Host: " + host + "\r\n" + 
                "Connection: close\r\n\r\n");
-      client.print(String("GET f0167723
-      
-      
-      .xsph.ru"));      
+      client.print(String("GET f0167723.xsph.ru"));      
   delay(100);
   // Read all the lines of the reply from server and print them to Serial
   while(client.available()){
